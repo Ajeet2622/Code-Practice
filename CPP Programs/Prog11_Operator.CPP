@@ -31,6 +31,7 @@ int main(){
 	cout<<"c++ = "<<c<<endl;
 	c = ++c;
 	cout<<"++c = "<<c<<endl;
+	//
 	// int c = 2, p;
 	// cout<<"c = "<<c<<endl;
 	// p = c++;
