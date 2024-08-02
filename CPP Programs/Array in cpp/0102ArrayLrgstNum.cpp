@@ -5,20 +5,22 @@ using namespace std;
  
 
 void maxMinNumber(int arr[],int n){
-	int max = INT_MIN;
-	int min = INT_MAX;
+	int maxn = INT_MIN;
+	int minn = INT_MAX;
 
 	for(int i = 0; i < n ;i++){
-		if(max<arr[i]){
-			max = arr[i];
-			///cout<<max<<endl;
-		}
-		if(min>arr[i]){
-			min = arr[i];
-		}
+		maxn = max(maxn ,arr[i]);
+		minn = min(minn , arr[i]);
+		// if(max<arr[i]){
+		// 	max = arr[i];
+		// 	///cout<<max<<endl;
+		// }
+		// if(min>arr[i]){
+		// 	min = arr[i];
+		// }
 	}
-	cout<<max<<endl;
-	cout<<min<<endl;
+	cout<<maxn<<endl;
+	cout<<minn<<endl;
 }
 
 int main(){
