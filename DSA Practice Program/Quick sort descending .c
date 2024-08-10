@@ -14,7 +14,7 @@ void printArr(int arr[],int size){
 
 
 int main(){
-	int arr[]={12,11,10,9,8,7,6,5,4,3,2,1};
+	int arr[]={12,11,10,9,18,7,6,5,4,3,2,1};
 	int n =sizeof(arr)/sizeof(arr[0]);
 	int low =0;
 	// printf("%d\n",n);
@@ -29,9 +29,9 @@ int partition(int arr[],int low,int high){
 		return 0;
 	}
 	int pivot = arr[low];
-	int idx=0;
+	int idx= 0;
 	for(int j=1; j<=high;j++){
-		if(arr[j]>=pivot){
+		if(arr[j]<=pivot){
 			idx++;
 			swap(&arr[j],&arr[idx]);
 			//if(idx==3){
@@ -40,7 +40,10 @@ int partition(int arr[],int low,int high){
 			//break;}
 		}
 	}
-	swap(&arr[idx],&arr[low]);
+	if(low!=idx){
+		swap(&arr[idx],&arr[low]);
+		//printf("hihi\n");
+	}
 			// printf("%d=%d\n",idx,arr[idx]);
 			// printf("%d=%d\n",low,arr[low]);
 
