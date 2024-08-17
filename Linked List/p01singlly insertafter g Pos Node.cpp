@@ -18,6 +18,7 @@ Node* insertAtPos(Node* head,int pos,int data){
 	if(pos == 1){
 		new_node->next = head;
 		head = new_node;
+		return head;
 	}
 	Node* curr = head;
 	int i=1;
@@ -54,7 +55,8 @@ int main(){
 	head->next->next->next->next->next = new Node(3);
     printList(head);
 	cout<<endl;
-	head = insertAtPos(head,3,78);
+	head = insertAtPos(head,1,4);
+	insertAtPos(head,3,78);
 	printList(head);
 
 	return 0;
